@@ -1,0 +1,19 @@
+<table class="tabel table-sm">
+    <thead>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th></th>
+    </thead>
+    <ng-container *ngFor="let student of studentArray">
+        <tr class="table-dark">
+            <td> {{student.fullName}} </td>
+            <td> {{student.email}} </td>
+            <td> {{student.mobile}} </td>
+            <td>
+                <button class="btn btn-outline-info">Edit</button>
+                <button class="btn btn-outline-info">Delete</button>
+            </td>
+        </tr>
+    </ng-container>
+</table>

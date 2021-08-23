@@ -1,0 +1,33 @@
+<div class="bootstrap-wrapper">
+    <div class="container  mt">
+        <div class="row ">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img src="img-fluid" style="width: 100px;" src="/assets/lock.png" alt="">
+                </div>
+                <h1 class="text-center">Login here !!</h1>
+                
+                <form>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>E-mail Address</mat-label>
+                        <input  name="username" #userName required type="text" matInput>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input name="username" #userPassword required type="password" matInput>
+                    </mat-form-field>
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary" (click)="authService.SignIn(userName.value, userPassword.value)">Login</button>
+                        <button style="margin-left:10px" type="submit" mat-raised-button color="accent" routerLink="/forgot-password" >Reset</button>
+                    </div>
+                    <div class="register-link">
+                        <span>Don't have an account?</span>&nbsp;<a mat-icon-button routerLink="/register" color="primary" >Sign up</a>   
+                    </div>
+                </form><br><br>
+                    <!-- {{credentials | json}} -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- [(ngModel)]="credentials.password" -->

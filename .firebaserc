@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-angular-auth-59834": {
+      "hosting": {
+        "Mid-day-meal": [
+          "fir-angular-auth-59834"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<div class="bootstrap-wrapper">
+    <div class="container text-center mt">
+        <h1>Welcome to dashboard Admin Panel</h1>
+        <button mat-raised-button> Get Details</button>
+        
+    </div><br><br>
+
+    <!--The content below is only a placeholder and can be replaced.-->
+   <div class="classnumber">
+    <mat-form-field  appearance="outline">
+      <mat-label>Enter your class</mat-label>
+      <input matInput #input  placeholder="class">
+    </mat-form-field>
+  </div>
+    <div class="row" style="margin-top: 25px;">
+        <div class="col-md-3">
+          <input type="text" class="form-control" [(ngModel)]="studentName"  placeholder="Name">
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control" [(ngModel)]="studentAge" placeholder="Age">
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control" [(ngModel)]="studentAddress" placeholder="Address">
+        </div>
+        <div class="col-md-3">
+          <button type="button" color="accent" mat-raised-button (click)="CreateRecord()" [disabled]="!studentName || !studentAge || !studentAddress" class="btn btn-primary">+
+            Create Student</button>
+        </div>
+
+</div>
